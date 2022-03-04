@@ -1,0 +1,142 @@
+/* Global */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+
+html {
+    scrollbar-color: #3f4452 #191C24;
+
+}
+
+body {
+    background-color: #191C24;
+    font-family: Bahnschrift;
+}
+
+h1, h2 {
+    color: #F3E5B1;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #A84E99;
+}
+
+/* Containers */
+#topbar {
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(90deg, #8583FF 0%, #941BA8 29.9%, #2551EE 78.22%, #6AE1FB 90.96%, #A84E99 100.96%);
+}
+
+#content-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Intro */
+
+section {
+    margin: 50px auto 100px auto;
+}
+
+section#intro h1 {
+    font-size: 46px;
+    margin-bottom: 50px;
+}
+
+section#intro div.intro-text p {
+    font-weight: 10;
+    margin-bottom: 28px;
+    max-width: 500px;
+    color: #ffffff
+}
+
+/* Intro - Social links */
+
+section#intro div.social-links {
+    margin-bottom: 28px;
+}
+
+section#intro div.social-links a.social-link-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 6px;
+    max-width: fit-content;
+}
+
+section#intro div.social-links a.social-link-item span {
+    width: 24px;
+}
+
+section#intro div.social-links a.social-link-item img {
+    height: 18px;
+}
+
+/* Intro - Profile pic */
+
+section#intro div.profile-pic-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+section#intro div.profile-pic-container p {
+    color: #AEC7E4;
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+/* Projects */
+
+section#projects h2 {
+    font-size: 28px;
+    margin-bottom: 14px;
+}
+
+section#projects div.project-row {
+    display: flex;
+    color: #ffffff;
+    max-width: 90%;
+    margin-bottom: 10px;
+    font-size: 100%;
+}
+
+section#projects div.project-row:hover {
+    color:red;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    section#projects div.project-row {
+        font-size: 2.5vw;
+    }
+}
+
+section#projects div.project-row div.col-year {
+    flex: 1;
+    min-width: 70px;
+}
+
+section#projects div.project-row div.col-name {
+    flex: 4;
+}
+
+section#projects div.project-row div.col-client {
+    flex: 3;
+}
