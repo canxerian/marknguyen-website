@@ -12,6 +12,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
+    <script src="index.js"></script>
 </head>
 
 <body>
@@ -52,34 +54,37 @@
 
         <section id="projects">
             <h2>Projects</h2>
-            <div class="project-row">
+            <div class="project-row cursor-hover" data-project="2022-awesome-quotes">
                 <div class="col-year">2022</div>
                 <div class="col-name">Awesome Quotes</div>
                 <div class="col-client">Personal</div>
             </div>
-            <div class="project-row">
+            <div class="project-row cursor-hover" data-project="2021-dreamglass">
                 <div class="col-year">2021</div>
                 <div class="col-name">Dreamglass</div>
                 <div class="col-client">Microsoft / Mattress Firm</div>
             </div>
-            <div class="project-row">
+            <div class="project-row cursor-hover" data-project="2021-naval-group">
                 <div class="col-year">2021</div>
                 <div class="col-name">Innovation Project</div>
                 <div class="col-client">Microsoft / Naval Group</div>
             </div>
-            <div class="project-row">
+            <div class="project-row cursor-hover" data-project="2021-moi">
                 <div class="col-year">2021</div>
                 <div class="col-name">Innovation Project</div>
                 <div class="col-client">Microsoft / UAE Ministry of Interior</div>
             </div>
-            <div class="project-row">
+            <div class="project-row cursor-hover" data-project="2020-aflac-cancer">
                 <div class="col-year">2020</div>
                 <div class="col-name">Cancer Awareness Campaign</div>
                 <div class="col-client">Microsoft / Aflac Japan</div>
             </div>
         </section>
+    </div>
 
-        <!-- <iframe id="frame" src="https://www.google.com"></iframe> -->
+    <div id="project-modal" class="show">
+        <div id="project-modal-close" class="cursor-hover" href="javascript:void(0)"></div>
+        <div id="project-modal-content"></div>
     </div>
 </body>
 

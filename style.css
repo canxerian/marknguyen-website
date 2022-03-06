@@ -36,6 +36,10 @@ a:hover {
     color: #a75f9b;
 }
 
+.cursor-hover:hover {
+    cursor: pointer;
+}
+
 /* Containers */
 #topbar {
     width: 100%;
@@ -126,8 +130,7 @@ section#projects div.project-row {
 }
 
 section#projects div.project-row:hover {
-    color: red;
-    cursor: pointer;
+    color: #5f78a7;
 }
 
 @media screen and (max-width: 600px) {
@@ -149,8 +152,52 @@ section#projects div.project-row div.col-client {
     flex: 3;
 }
 
-#frame {
-    width: 120%;
-    height: 1000px;
-    border: none;
+/* Project Modal */
+
+div#project-modal {
+    position: fixed;
+    min-height: 100vh;
+    width: 50vw;
+
+    top: 0;
+    background-color: #f8fdff;
+    overflow: scroll;
+    transition: 0.5s;
+    transform: translateX(200%);
+}
+
+@media screen and (max-width: 600px) {
+    div#project-modal {
+        background-color: blue;
+        width: 90vw;
+    }
+}
+
+div#project-modal.show {
+    transition: 0.5s;
+    transform: translateX(100%);
+}
+
+@media screen and (max-width: 600px) {
+    div#project-modal.show {
+        transform: translateX(10%);
+    }
+}
+
+div#project-modal div#project-modal-content {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+}
+
+div#project-modal-close {
+    background-image: url("./images/closeButton.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 84px;
+    width: 84px;
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }
