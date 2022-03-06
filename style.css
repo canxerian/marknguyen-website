@@ -148,3 +148,9 @@ section#projects div.project-row div.col-name {
 section#projects div.project-row div.col-client {
     flex: 3;
 }
+
+#frame {
+    width: 120%;
+    height: 1000px;
+    border: none;
+}
