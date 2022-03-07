@@ -1,0 +1,25 @@
+div#project-modal-content {
+    height: 100%;
+    padding: 4vw;
+    overflow:  scroll;
+}
+
+div#project-modal-content section {
+    margin: 50px 0 140px 0;
+}
+
+div#project-modal-content h1 {
+    color: #550b92;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+div#project-modal-content p {
+    color: #542370;
+}
+
+div#project-modal-content div#shape {
+    position: relative;
+    height: 30px;
+    background-color: red;
+}

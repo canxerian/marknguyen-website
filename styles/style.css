@@ -12,7 +12,6 @@ dd {
     margin: 0;
 }
 
-
 html {
     scrollbar-color: #3f4452 #191C24;
 
@@ -25,11 +24,23 @@ body {
 
 h1, h2 {
     color: #F3E5B1;
+    font-weight: 400;
 }
 
 a {
     color: #f0bbe7;
     text-decoration: none;
+}
+
+p {
+    font-weight: 100;
+    margin-bottom: 28px;
+    max-width: 500px;
+    color: #ffffff
+}
+
+span {
+    font-weight: 100;
 }
 
 a:hover {
@@ -60,7 +71,7 @@ a:hover {
 /* Intro */
 
 section {
-    margin: 50px auto 140px auto;
+    margin: 50px auto 100px auto;
 }
 
 section#intro {
@@ -72,13 +83,6 @@ section#intro h1 {
     margin-bottom: 50px;
 }
 
-section#intro div.intro-text p {
-    font-weight: 10;
-    margin-bottom: 28px;
-    max-width: 500px;
-    color: #ffffff
-}
-
 /* Intro - Social links */
 
 section#intro div.social-links {
@@ -87,18 +91,19 @@ section#intro div.social-links {
 
 section#intro div.social-links a.social-link-item {
     display: flex;
-    flex-direction: row;
-    align-items: center;
     margin-bottom: 6px;
-    max-width: fit-content;
-}
-
-section#intro div.social-links a.social-link-item span {
-    width: 24px;
+    white-space: nowrap;
 }
 
 section#intro div.social-links a.social-link-item img {
     height: 18px;
+    width: 34px;
+    object-fit: contain;
+    object-position: left bottom;
+}
+
+section#intro div.social-links a.social-link-item span {
+    font-weight: 400;
 }
 
 /* Intro - Profile pic */
@@ -109,7 +114,7 @@ section#intro div.profile-pic-container {
     align-items: center;
 }
 
-section#intro div.profile-pic-container p {
+section#intro div.profile-pic-container span {
     color: #AEC7E4;
     margin-right: 20px;
     font-size: 20px;
@@ -118,7 +123,7 @@ section#intro div.profile-pic-container p {
 /* Projects */
 
 section#projects h2 {
-    font-size: 28px;
+    font-size: 32px;
     margin-bottom: 14px;
 }
 
@@ -157,13 +162,13 @@ section#projects div.project-row div.col-client {
 
 div#project-modal {
     position: fixed;
-    min-height: 100vh;
+    height: 100%;
     min-width: 600px;
     width: 50vw;
     top: 0;
     background-color: #f8fdff;
-    overflow: scroll;
     transform: translateX(100vw);
+    box-shadow: -2px 0px 20px rgba(44, 52, 75, 0.6);
 
     transition: 0.5s;
 }
@@ -188,16 +193,10 @@ div#project-modal {
     }
 }
 
-
-div#project-modal div#project-modal-content {
-    width: 100%;
-    height: 100%;
-    min-height: 100vh;
-}
-
-img#project-modal-close {
+div#project-modal img#project-modal-close {
     content: "";
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 0px;
+    right: 0px;
+    transform: translateX(3%) translateY(-15%) scale(0.5);
 }

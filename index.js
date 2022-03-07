@@ -3,14 +3,12 @@ function loadModal(modalElement, contentElement, projectId) {
     const xhr = new XMLHttpRequest();
     xhr.open('GET', url, true);
     xhr.onreadystatechange = function () {
-        console.log(this);
         if (this.readyState !== 4) return;
         if (this.status !== 200) {
-            alert("Could load page for modal: " + url);
+            console.error("Could load page for modal: " + url);
             return;
         }
-
-        // contentElement.innerHTML = this.responseText;
+        contentElement.innerHTML = this.responseText;
         modalElement.classList.add("show");
     }
     xhr.send();
