@@ -36,7 +36,8 @@ p {
     font-weight: 100;
     margin-bottom: 28px;
     max-width: 500px;
-    color: #ffffff
+    color: #ffffff;
+    font-family: 'Open Sans', sans-serif;
 }
 
 span {
@@ -131,8 +132,9 @@ section#projects div.project-row {
     display: flex;
     color: #ffffff;
     max-width: 90%;
-    margin-bottom: 10px;
+    margin-bottom: 16px;
     font-size: 100%;
+    gap: 10px;
 }
 
 section#projects div.project-row:hover {
@@ -151,15 +153,14 @@ section#projects div.project-row.selected {
 
 section#projects div.project-row div.col-year {
     flex: 1;
-    min-width: 70px;
 }
 
 section#projects div.project-row div.col-name {
-    flex: 4;
+    flex: 10;
 }
 
 section#projects div.project-row div.col-client {
-    flex: 3;
+    flex: 5;
 }
 
 /* Project Modal */
@@ -170,9 +171,9 @@ div#project-modal {
     min-width: 600px;
     width: 50vw;
     top: 0;
-    background-color: #f8fdff;
+    background-color: #1f2433;
     transform: translateX(100vw);
-    box-shadow: -2px 0px 20px rgba(44, 52, 75, 0.6);
+    box-shadow: -3px 0px 20px rgba(22, 26, 36, 0.6);
 
     transition: 0.5s;
 }
