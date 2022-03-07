@@ -54,6 +54,7 @@ a:hover {
     background-image: url("./images/ring.svg");
     background-size: contain;
     background-repeat: no-repeat;
+    padding: 4px;
 }
 
 /* Intro */
@@ -157,32 +158,36 @@ section#projects div.project-row div.col-client {
 div#project-modal {
     position: fixed;
     min-height: 100vh;
+    min-width: 600px;
     width: 50vw;
-
     top: 0;
     background-color: #f8fdff;
     overflow: scroll;
+    transform: translateX(100vw);
+
     transition: 0.5s;
-    transform: translateX(200%);
 }
 
+/* Mobile screens (< 600px) */
 @media screen and (max-width: 600px) {
     div#project-modal {
         background-color: blue;
-        width: 90vw;
+        width: 100vw;
+        min-width: 0;
     }
-}
 
-div#project-modal.show {
-    transition: 0.5s;
-    transform: translateX(100%);
-}
-
-@media screen and (max-width: 600px) {
     div#project-modal.show {
-        transform: translateX(10%);
+        transform: translateX(0);
     }
 }
+
+/* Tablets and PCs (> 600px) */
+@media screen and (min-width: 600px) {
+    div#project-modal.show {
+        transform: translateX(calc(100vw - 100%));
+    }
+}
+
 
 div#project-modal div#project-modal-content {
     width: 100%;

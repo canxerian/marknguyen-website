@@ -10,7 +10,7 @@ function loadModal(modalElement, contentElement, projectId) {
             return;
         }
 
-        contentElement.innerHTML = this.responseText;
+        // contentElement.innerHTML = this.responseText;
         modalElement.classList.add("show");
     }
     xhr.send();
