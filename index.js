@@ -1,4 +1,32 @@
-function loadModal(modalElement, contentElement, projectId) {
+let projectModal;
+let projectContent;
+let projectItems;
+
+window.onload = onLoad;
+
+function onLoad() {
+    projectModal = document.getElementById("project-modal");
+    projectContent = document.getElementById("project-modal-content");
+    projectItems = document.getElementsByClassName("project-row");
+
+    // initialise click handlers
+    for (var i = 0; i < projectItems.length; i++) {
+        const projectItem = projectItems[i];
+        projectItem.onclick = () => {
+            loadModal(projectModal, projectContent, projectItem, projectItem.dataset.project);
+        }
+    }
+
+    document.getElementById("project-modal-close").onclick = function () {
+        projectModal.classList.remove("show");
+        resetProjectItems();
+    }
+
+    // debug -
+    loadModal(projectModal, projectContent, "2022-awesome-quotes");
+}
+
+function loadModal(modalElement, contentElement, projectLinkItem, projectId) {
     const url = `./projects/${projectId}.html`;
     const xhr = new XMLHttpRequest();
     xhr.open('GET', url, true);
@@ -9,30 +37,16 @@ function loadModal(modalElement, contentElement, projectId) {
             return;
         }
         contentElement.innerHTML = this.responseText;
+        
+        resetProjectItems();
+        projectLinkItem.classList.add("selected");
         modalElement.classList.add("show");
     }
     xhr.send();
 }
 
-function onLoad() {
-    const projectModal = document.getElementById("project-modal");
-    const projectContent = document.getElementById("project-modal-content");
-    const projectItems = document.getElementsByClassName("project-row");
-
-    // initialise click handlers
+function resetProjectItems() {
     for (var i = 0; i < projectItems.length; i++) {
-        const projectItem = projectItems[i];
-        projectItem.onclick = () => {
-            loadModal(projectModal, projectContent, projectItem.dataset.project);
-        }
+        projectItems[i].classList.remove("selected");
     }
-
-    document.getElementById("project-modal-close").onclick = function () {
-        projectModal.classList.remove("show");
-    }
-
-    // debug -
-    loadModal(projectModal, projectContent, "2022-awesome-quotes");
 }
-
-window.onload = onLoad;

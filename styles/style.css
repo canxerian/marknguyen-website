@@ -139,6 +139,10 @@ section#projects div.project-row:hover {
     color: #5f78a7;
 }
 
+section#projects div.project-row.selected {
+    color: #203864;
+}
+
 @media screen and (max-width: 600px) {
     section#projects div.project-row {
         font-size: 2.5vw;
