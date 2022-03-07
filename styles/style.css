@@ -51,7 +51,7 @@ a:hover {
     max-width: 800px;
     /* min-height: 900px; */
     margin: 0 auto;
-    background-image: url("./images/ring.svg");
+    background-image: url("../images/ring.svg");
     background-size: contain;
     background-repeat: no-repeat;
     padding: 4px;
@@ -195,12 +195,7 @@ div#project-modal div#project-modal-content {
     min-height: 100vh;
 }
 
-div#project-modal-close {
-    background-image: url("./images/closeButton.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 84px;
-    width: 84px;
+img#project-modal-close {
     content: "";
     position: absolute;
     top: 20px;
