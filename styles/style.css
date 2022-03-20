@@ -14,7 +14,6 @@ dd {
 
 html {
     scrollbar-color: #3f4452 #191C24;
-
 }
 
 body {
@@ -174,14 +173,12 @@ div#project-modal {
     background-color: #1f2433;
     transform: translateX(100vw);
     box-shadow: -3px 0px 20px rgba(22, 26, 36, 0.6);
-
     transition: 0.5s;
 }
 
 /* Mobile screens (< 600px) */
 @media screen and (max-width: 600px) {
     div#project-modal {
-        background-color: blue;
         width: 100vw;
         min-width: 0;
     }
@@ -200,7 +197,6 @@ div#project-modal {
 
 div#project-modal img#project-modal-close {
     position: absolute;
-    top: 0px;
-    right: 0px;
-    transform: translateX(3%) translateY(-15%) scale(0.5);
+    top: 6px;
+    right: 12px;
 }
