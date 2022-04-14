@@ -13,7 +13,7 @@ function onLoad() {
     for (var i = 0; i < projectItems.length; i++) {
         const projectItem = projectItems[i];
         projectItem.onclick = () => {
-            loadModal(projectModal, projectContent, projectItem, projectItem.dataset.project);
+            loadModal(projectModal, projectContent, projectItem);
         }
     }
 
@@ -21,12 +21,16 @@ function onLoad() {
         projectModal.classList.remove("show");
         resetProjectItems();
     }
+
+    loadModal(projectModal, projectContent, document.querySelector("[data-project='2021-dreamglass']"));
 }
 
-function loadModal(modalElement, contentElement, projectLinkItem, projectId) {
+function loadModal(modalElement, contentElement, projectLinkItem) {
+    const projectId = projectLinkItem.dataset.project;
     const url = `./projects/${projectId}.html`;
     const xhr = new XMLHttpRequest();
     xhr.open('GET', url, true);
+    xhr.setRequestHeader('Cache-Control', 'no-cache');
     xhr.onreadystatechange = function () {
         if (this.readyState !== 4) return;
         if (this.status !== 200) {
@@ -34,7 +38,7 @@ function loadModal(modalElement, contentElement, projectLinkItem, projectId) {
             return;
         }
         contentElement.innerHTML = this.responseText;
-        
+
         resetProjectItems();
         projectLinkItem.classList.add("selected");
         modalElement.classList.add("show");
