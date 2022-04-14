@@ -22,7 +22,7 @@ function onLoad() {
         resetProjectItems();
     }
 
-    loadModal(projectModal, projectContent, document.querySelector("[data-project='2021-dreamglass']"));
+    // loadModal(projectModal, projectContent, document.querySelector("[data-project='2021-dreamglass']"));
 }
 
 function loadModal(modalElement, contentElement, projectLinkItem) {
