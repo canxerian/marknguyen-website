@@ -21,9 +21,6 @@ function onLoad() {
         projectModal.classList.remove("show");
         resetProjectItems();
     }
-
-    // debug -
-    loadModal(projectModal, projectContent, "2022-awesome-quotes");
 }
 
 function loadModal(modalElement, contentElement, projectLinkItem, projectId) {

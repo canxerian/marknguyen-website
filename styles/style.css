@@ -31,11 +31,14 @@ a {
     text-decoration: none;
 }
 
-p {
+li, p {
+    color: #ffffff;
     font-weight: 100;
+}
+
+p {
     margin-bottom: 28px;
     max-width: 500px;
-    color: #ffffff;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -60,7 +63,6 @@ a:hover {
 
 #content-container {
     max-width: 800px;
-    /* min-height: 900px; */
     margin: 0 auto;
     background-image: url("../images/ring.svg");
     background-size: contain;
@@ -74,13 +76,24 @@ section {
     margin: 50px auto 100px auto;
 }
 
-section#intro {
-    /* min-height: 800px; */
+section#intro h1 {
+    font-size: 40px;
 }
 
-section#intro h1 {
-    font-size: 46px;
+section#intro div#intro-name {
     margin-bottom: 50px;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+}
+
+section#intro div#intro-name div#intro-name-photo {
+    width: 110px;
+}
+
+section#intro div#intro-name div#intro-name-heading {
+    flex-grow: 1;
+    width: 200px;
 }
 
 /* Intro - Social links */
@@ -104,20 +117,6 @@ section#intro div.social-links a.social-link-item img {
 
 section#intro div.social-links a.social-link-item span {
     font-weight: 400;
-}
-
-/* Intro - Profile pic */
-
-section#intro div.profile-pic-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-section#intro div.profile-pic-container span {
-    color: #AEC7E4;
-    margin-right: 20px;
-    font-size: 20px;
 }
 
 /* Projects */

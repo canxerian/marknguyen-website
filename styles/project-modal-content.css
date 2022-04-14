@@ -14,6 +14,12 @@ div#project-modal-content h1 {
     margin-bottom: 30px;
 }
 
+div#project-modal-content h2 {
+    /* color: #550b92; */
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
 div#project-modal-content p {
     /* color: #542370; */
 }
